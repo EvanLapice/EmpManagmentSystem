@@ -18,8 +18,11 @@ namespace EmpManagmentSystem.Controllers
         {
             var empnew = new Employee();
             empnew.Id = cRUD.GetMaxID();
-
             return View(empnew);
+        }
+        public IActionResult About()
+        {
+            return View();
         }
         [HttpPost]
         public async Task<ActionResult> Create(Employee obj,IFormFile file)
